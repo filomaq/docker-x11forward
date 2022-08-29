@@ -1,4 +1,4 @@
-# X11 Docker
+# X11 Docker Over SSH
 XDOCKER_DISP_NUM=$(echo $DISPLAY | grep -o "^localhost\:[0-9]\+" | grep -o "[0-9]\+")
 if [ -n "${XDOCKER_DISP_NUM}" ]; then
         XDOCKER_UNIX_DIR=$HOME/.Xdocker
