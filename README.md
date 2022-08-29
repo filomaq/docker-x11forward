@@ -1,5 +1,5 @@
 # x11-docker-over-ssh
-Use X11 display in docker container of ssh server
+Use X11 display in any docker rootless container of ssh server
 
 1. Install "socat" (sudo apt install socat).
 2. Append "xdocker.sh" to "$HOME/.bashrc" (cat xdocker.sh >> "$HOME/.bashrc").
