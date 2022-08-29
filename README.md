@@ -1,4 +1,4 @@
-# x11-docker
+# x11-docker-over-ssh
 Use X11 display in docker container of ssh server
 
 1. Install "socat".
