@@ -6,4 +6,5 @@ Use X11 display in any docker rootless container of ssh server
 3. When re-connect to ssh server, if X11 forward enabled, "$HOME/.Xdocker" will created.
 4. You can pass $XDOCKER_DISP, $XDOCKER_AUTH, and $XDOCKER_UNIX to your docker container.
 
-EX) docker run -it -e DISPLAY="$XDOCKER_DISP" -v "$XDOCKER_UNIX":/tmp/.X11-unix:ro {image} /bin/bash -c "xauth add $XDOCKER_AUTH; /bin/bash"
+EX1) docker run -it -e DISPLAY="$XDOCKER_DISP" -v "$XDOCKER_UNIX":/tmp/.X11-unix:ro {image} /bin/bash -c "xauth add $XDOCKER_AUTH; /bin/bash"
+EX2) docker run -it -e DISPLAY="$XDOCKER_DISP" -v "$XDOCKER_UNIX":/tmp/.X11-unix:ro -v $XDOCKER_AUTHFILE:/root/.Xauthority:ro --hostname $XDOCKER_HOSTNAME {image}
